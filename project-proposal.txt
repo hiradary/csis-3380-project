@@ -1,0 +1,17 @@
+Summer 2023
+CSIS 3380-001 - Douglas College
+
+Author: Hirad Arshadiyarahmadi
+
+---------------------
+
+Project Proposal:
+
+The project is about a News Analysis tool that leverages Large Language Models (e.g., GPT-4)
+to perform some analysis on a given news.
+
+It asks for a URL from a designated list of news sources to analyze the news text. Alternatively,
+one can copy and paste the text from whatever news source. The URL input merely serves
+as a tool to improve the UX.
+
+The analysis includes generating highlights, semantic checks, open questions, etc. The user will also be able to chat with the AI and get its viewpoint on a specific aspect of the text.
