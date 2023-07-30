@@ -2,17 +2,17 @@ const xray = require("x-ray");
 
 const scan = xray();
 
-const scrapeUrl = (url: string) => {
-  try {
+const scrapeUrl = (url: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
     scan(
       url,
       ".article-content"
-    )((err, content) => {
-      console.log({ err, content });
+    )((err: Error, content: string) => {
+      if (err) reject(err);
+
+      resolve(content);
     });
-  } catch (err) {
-    return "Something unexpected happened. Please try again later!";
-  }
+  });
 };
 
 export { scrapeUrl };
