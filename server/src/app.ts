@@ -5,8 +5,11 @@ import cors from "cors";
 
 import * as middlewares from "./middlewares";
 import api from "./api";
+import { connectDb } from "./helpers/db";
 
 const app = express();
+
+connectDb();
 
 app.use(morgan("dev"));
 app.use(helmet());

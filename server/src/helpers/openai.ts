@@ -13,7 +13,7 @@ export const chatCompletion = async (
     model: "gpt-4",
     messages,
     temperature: 0.7,
-    max_tokens: 1224,
+    max_tokens: 5000,
   });
 
   return completion?.data.choices[0].message?.content;
