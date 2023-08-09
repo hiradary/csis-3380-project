@@ -1,21 +1,25 @@
-# mini-ai-playground
+# CSIS 3380 Semester Project
 
-A small playground for various AI models.
+An AI-powered news analysis.
 
 ## Getting Started
 
-First, run the development server:
+1. Install packages using Yarn:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create an `.env` file inside `/server` using the values within the `.env.example` file.
+3. Replace the `.env` values with your own values.
+4. Run the following commands in the root of the project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This command will spin up both the server & the client.
+
+Note:
+
+The `openai` module of this project is using the `gpt-4` model from OpenAI. If you don't have access to GPT-4 API, you can edit the `openai.ts` file and replace the `gpt-4` value with `gpt-3.5-turbo`.

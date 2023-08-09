@@ -27,8 +27,6 @@ router.post("/analyze", async (req, res) => {
   try {
     const content = req.body.content;
 
-    console.log({ content });
-
     const modelResponse = await chatCompletion([
       { role: "system", content: SYSTEM_MESSAGE },
       { role: "user", content },
